@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153b2d" />
+    <meta name="description" content="하우스 시설에서 배지 표고버섯을 안전하게 재배하기 위한 현장 교육 실습자료" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23153b2d'/%3E%3Cpath d='M12 32c3-14 13-20 20-20s17 6 20 20H12Z' fill='%23d7a86e'/%3E%3Cpath d='M27 31h10l4 21H23l4-21Z' fill='%23fff7e7'/%3E%3Cpath d='M18 27c8 3 20 3 28 0' fill='none' stroke='%23936138' stroke-width='3'/%3E%3C/svg%3E" />
+    <title>배지 표고버섯 재배 실습교실</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="배지 표고버섯 재배 실습교실 처음으로">
+        <span class="brand-mark" aria-hidden="true">표고</span>
+        <span><strong>재배 실습교실</strong><small>HOUSE SHIITAKE LAB</small></span>
+      </a>
+      <nav aria-label="교육자료 바로가기">
+        <a href="#course">교육과정</a><a href="#practice">실습</a><a href="#safety">안전</a>
+      </nav>
+      <button class="print-button" id="printButton" type="button" aria-label="교육자료 인쇄">인쇄하기</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <img src="shiitake-house.png" alt="선반에 톱밥 배지를 배열해 표고버섯을 재배하는 하우스 내부" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">현장 실습자료 · 초급</p>
+          <h1 id="heroTitle">배지 표고버섯<br /><em>한 동을 제대로</em> 관리하는 법</h1>
+          <p>입식 전 점검부터 발이·생육·수확·휴양까지, 하우스 안에서 오늘 확인할 기준을 순서대로 익힙니다.</p>
+          <a class="start-link" href="#course">01부터 시작하기 <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-readout" aria-label="발이 단계 핵심 환경 기준 예시">
+          <span>발이 단계 기준</span>
+          <strong>15±3℃</strong><small>품종 특성 우선</small>
+          <strong>약 90%</strong><small>상대습도</small>
+          <strong>150–200 lx</strong><small>생육 조명</small>
+        </div>
+      </section>
+
+      <section class="intro" id="course">
+        <div>
+          <p class="section-no">교육 목표</p>
+          <h2>숫자를 외우기보다<br />배지의 신호를 읽습니다.</h2>
+        </div>
+        <p>같은 하우스라도 품종, 배지 크기, 입식량과 계절에 따라 반응이 다릅니다. 이 자료의 수치는 출발점으로 사용하고, 종균·배지 공급처의 품종별 지침과 현장 기록을 함께 확인하세요.</p>
+      </section>
+
+      <section class="course-grid" aria-label="교육과정 개요">
+        <article><span>01</span><h3>입식 전 준비</h3><p>청소·소독, 동선 분리, 장비와 배지 상태를 점검합니다.</p></article>
+        <article><span>02</span><h3>발이 유도</h3><p>수분 자극과 온도·습도·빛을 맞춰 균일한 원기를 유도합니다.</p></article>
+        <article><span>03</span><h3>생육 관리</h3><p>과습을 피하고 환기와 관수를 조절해 단단한 갓을 만듭니다.</p></article>
+        <article><span>04</span><h3>수확과 휴양</h3><p>적기에 수확하고 배지를 쉬게 한 뒤 다음 주기를 준비합니다.</p></article>
+      </section>
+
+      <section class="environment" id="practice" aria-labelledby="environmentTitle">
+        <div class="section-heading">
+          <div><p class="section-no">환경 관리 실습</p><h2 id="environmentTitle">단계가 바뀌면<br />관리 기준도 바뀝니다.</h2></div>
+          <p>아래 단계를 눌러 목표 범위와 관찰 포인트를 비교하세요. 수치는 일반적인 교육 기준이며, 실제 설정은 품종별 발생온도와 배지업체 지침을 우선합니다.</p>
+        </div>
+        <div class="stage-tabs" role="tablist" aria-label="생육 단계 선택">
+          <button class="active" type="button" role="tab" aria-selected="true" data-stage="culture"><span>01</span>배양·숙성</button>
+          <button type="button" role="tab" aria-selected="false" data-stage="pinning"><span>02</span>발이 유도</button>
+          <button type="button" role="tab" aria-selected="false" data-stage="growth"><span>03</span>생육·수확</button>
+          <button type="button" role="tab" aria-selected="false" data-stage="rest"><span>04</span>휴양·재발생</button>
+        </div>
+        <div class="stage-board" aria-live="polite">
+          <div class="stage-copy"><span id="stageLabel">배양·숙성</span><h3 id="stageTitle">균사가 배지를 고르게 채우는 시간</h3><p id="stageDescription">실내 공기보다 배지 내부가 더 뜨거울 수 있습니다. 배지 사이에 공기가 흐르도록 간격을 두고, 녹색·검은색 오염과 이상 발열을 매일 확인합니다.</p><p class="stage-caution" id="stageCaution">핵심: 실내 온도만 보지 말고 대표 배지의 중심 온도를 함께 기록하세요.</p></div>
+          <div class="meters">
+            <div><span>온도</span><strong id="tempValue">23–25℃</strong><small id="tempNote">일반 배양 기준</small></div>
+            <div><span>상대습도</span><strong id="humidityValue">65–70%</strong><small id="humidityNote">과습·결로 방지</small></div>
+            <div><span>빛</span><strong id="lightValue">후기 명배양</strong><small id="lightNote">원기 형성 준비</small></div>
+            <div><span>환기</span><strong id="airValue">공기 순환</strong><small id="airNote">열 정체 방지</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" aria-labelledby="workflowTitle">
+        <div class="workflow-head"><p class="section-no">표준 작업 흐름</p><h2 id="workflowTitle">하우스에 들어가기 전부터<br />수확 뒤까지</h2></div>
+        <ol class="timeline">
+          <li><span>1</span><div><h3>입식 1일 전</h3><p>바닥·선반·배수로를 청소하고 충분히 건조합니다. 방충망, 가습기, 환풍기, 온습도 센서의 작동을 확인합니다.</p></div></li>
+          <li><span>2</span><div><h3>입식 당일</h3><p>배지 생산일·품종·로트를 기록하고, 찢김·악취·잡균색이 보이는 배지는 즉시 분리합니다. 벽과 바닥에 닿지 않게 배열합니다.</p></div></li>
+          <li><span>3</span><div><h3>발이 유도</h3><p>완숙배지에 품종 지침에 맞는 수분 자극을 주고 초기 건조를 막습니다. 원기가 고르게 보이면 직접 살수를 줄이고 공중습도를 관리합니다.</p></div></li>
+          <li><span>4</span><div><h3>솎기·생육</h3><p>과도한 원기는 품질 저하를 부를 수 있습니다. 건전한 개체를 남기고 환기해 대가 길어지거나 갓이 물러지는 것을 막습니다.</p></div></li>
+          <li><span>5</span><div><h3>수확·선별</h3><p>갓이 충분히 펴지기 전, 자루 밑동을 잡아 비틀어 잔여물이 적게 남도록 수확합니다. 상품·비상품을 바로 구분하고 신속히 예냉합니다.</p></div></li>
+          <li><span>6</span><div><h3>휴양·다음 주기</h3><p>수확 잔여물을 제거하고 배지를 건조 상태로 쉬게 합니다. 일반 예시로 20℃에서 10–15일 휴양 후 약 24시간 침수하지만, 배지 상태와 품종 지침을 우선합니다.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="field-lab" aria-labelledby="fieldTitle">
+        <div class="section-heading light-heading">
+          <div><p class="section-no">30분 현장 실습</p><h2 id="fieldTitle">관찰 → 판단 →<br />조치 → 기록</h2></div>
+          <p>한 구역을 정해 위에서 아래, 입구에서 안쪽 순서로 봅니다. 완료한 항목을 표시하면 실습 진도가 자동으로 계산됩니다.</p>
+        </div>
+        <div class="lab-layout">
+          <div class="checklist-card">
+            <div class="progress-head"><strong>나의 실습 진도</strong><span id="progressText">0 / 6</span></div>
+            <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+            <div class="checklist" id="checklist">
+              <label><input type="checkbox" /><span><b>① 입구·바닥</b> 외부 흙 유입, 고인 물, 미끄럼 위험을 확인한다.</span></label>
+              <label><input type="checkbox" /><span><b>② 기기</b> 온습도계와 별도 검증계를 나란히 두고 값을 비교한다.</span></label>
+              <label><input type="checkbox" /><span><b>③ 배지</b> 20개를 골라 색, 냄새, 갈변, 수분감과 오염을 본다.</span></label>
+              <label><input type="checkbox" /><span><b>④ 버섯</b> 갓 색·갈라짐·물러짐, 대 길이와 기형을 관찰한다.</span></label>
+              <label><input type="checkbox" /><span><b>⑤ 공기</b> 선반 안쪽 정체 구간과 결로 지점을 찾는다.</span></label>
+              <label><input type="checkbox" /><span><b>⑥ 기록</b> 관찰값, 판단, 조치, 재확인 시간을 한 줄로 남긴다.</span></label>
+            </div>
+            <button class="reset-button" id="resetChecklist" type="button">체크 초기화</button>
+          </div>
+          <div class="record-card">
+            <span class="card-label">현장 기록 연습</span>
+            <h3>오늘의 한 줄 기록</h3>
+            <form id="recordForm">
+              <label>관찰 구역<input id="zoneInput" placeholder="예: 2동 A선반" required /></label>
+              <div class="input-pair"><label>온도<input id="tempInput" inputmode="decimal" type="number" step="0.1" placeholder="℃" required /></label><label>습도<input id="humidInput" inputmode="decimal" type="number" min="0" max="100" placeholder="%" required /></label></div>
+              <label>관찰 내용<textarea id="noteInput" rows="3" placeholder="예: 안쪽 선반에 결로, 대가 길어짐" required></textarea></label>
+              <button type="submit">기록문 만들기</button>
+            </form>
+            <div class="record-output" id="recordOutput" hidden><span>기록 예시</span><p></p><button id="copyRecord" type="button">문장 복사</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="diagnosis" aria-labelledby="diagnosisTitle">
+        <div class="section-heading">
+          <div><p class="section-no">증상별 판단</p><h2 id="diagnosisTitle">이상 신호를 보면<br />한 번에 하나씩 조치합니다.</h2></div>
+          <p>원인을 단정하지 말고 온도·습도·환기·관수 기록을 먼저 비교하세요. 오염 의심 배지는 정상 구역에서 열거나 흔들지 않습니다.</p>
+        </div>
+        <div class="diagnosis-grid">
+          <details open><summary><span>갓이 연하고 물러요</span><b>과습 의심</b></summary><p>발이 후 직접 살수나 공중습도가 과한지 확인합니다. 버섯 표면의 물방울을 말리고 환기를 짧게 늘리되, 배지 자체가 마르지 않게 관찰합니다.</p></details>
+          <details><summary><span>대가 길고 갓이 작아요</span><b>환기·광 점검</b></summary><p>공기 정체와 낮은 조도를 확인합니다. 선반 안쪽까지 공기가 흐르는지 보고, 생육 기간 약 150–200 lx 수준의 빛이 고르게 닿는지 측정합니다.</p></details>
+          <details><summary><span>갓 표면이 갈라져요</span><b>건조·급변 점검</b></summary><p>상대습도 급락, 강한 직풍, 관수 간격을 확인합니다. 가습량을 한꺼번에 올리기보다 작은 폭으로 조정하고 30분 뒤 다시 봅니다.</p></details>
+          <details><summary><span>녹색·검은 반점이 보여요</span><b>즉시 격리</b></summary><p>다른 배지보다 먼저 만지지 말고 봉투째 분리합니다. 사용한 장갑과 도구를 교체·소독하고 주변 배지에 같은 증상이 번지는지 표시해 관찰합니다.</p></details>
+          <details><summary><span>구역별 생육 차이가 커요</span><b>센서 위치 점검</b></summary><p>입구·중앙·안쪽, 상·중·하단의 값을 비교합니다. 단일 센서 값으로 판단하지 말고 선반 간격과 팬 방향을 함께 점검합니다.</p></details>
+          <details><summary><span>버섯파리가 보여요</span><b>유입원 차단</b></summary><p>방충망 틈과 배수구, 폐배지 보관 위치를 점검합니다. 끈끈이트랩으로 발생 위치를 기록하고, 방제는 등록 약제와 표시사항을 반드시 따릅니다.</p></details>
+        </div>
+      </section>
+
+      <section class="safety" id="safety" aria-labelledby="safetyTitle">
+        <div class="safety-lead"><p class="section-no">위생·안전</p><h2 id="safetyTitle">깨끗한 동선이<br />수량을 지킵니다.</h2><p>정상 구역에서 오염 의심 구역 방향으로 이동하고, 되돌아갈 때는 장갑·장화·도구를 교체하거나 소독합니다.</p></div>
+        <div class="zone-map" aria-label="권장 작업 동선">
+          <div class="zone clean"><span>청결구역</span><strong>손 씻기 · 전용복 · 장화</strong><small>입실 준비</small></div>
+          <div class="zone work"><span>재배구역</span><strong>정상 배지부터 작업</strong><small>구역별 도구 구분</small></div>
+          <div class="zone isolate"><span>격리구역</span><strong>오염 의심 배지 봉투 격리</strong><small>작업 후 소독</small></div>
+        </div>
+        <div class="safety-grid">
+          <article><span>01</span><h3>미끄럼</h3><p>관수 뒤 통로의 고인 물을 즉시 제거하고 호스는 통로 밖에 둡니다.</p></article>
+          <article><span>02</span><h3>전기</h3><p>젖은 손으로 플러그를 만지지 말고 누전차단기와 방수 덮개를 확인합니다.</p></article>
+          <article><span>03</span><h3>약제</h3><p>소독제·방제약은 라벨 희석배수와 보호구를 지키며 임의 혼용하지 않습니다.</p></article>
+          <article><span>04</span><h3>들기</h3><p>배지 상자는 몸 가까이 들고 허리보다 무릎을 굽혀 옮깁니다. 무리하면 2인 1조로 작업합니다.</p></article>
+        </div>
+      </section>
+
+      <section class="quiz" aria-labelledby="quizTitle">
+        <div><p class="section-no">마무리 확인</p><h2 id="quizTitle">3문제로 점검하기</h2><p>정답이라고 생각하는 항목을 누르세요.</p></div>
+        <div class="quiz-list" id="quizList">
+          <fieldset data-answer="b"><legend>01. 발이 후 갓에 물방울이 계속 맺혀 있다면?</legend><button type="button" data-choice="a">직접 살수를 더 한다</button><button type="button" data-choice="b">직접 살수를 줄이고 환기를 점검한다</button><p class="feedback"></p></fieldset>
+          <fieldset data-answer="a"><legend>02. 녹색 반점이 있는 배지를 발견했다면?</legend><button type="button" data-choice="a">정상 구역에서 열지 않고 즉시 격리한다</button><button type="button" data-choice="b">털어낸 뒤 같은 선반에 둔다</button><p class="feedback"></p></fieldset>
+          <fieldset data-answer="b"><legend>03. 하우스 환경 판단에 가장 좋은 방법은?</legend><button type="button" data-choice="a">입구 센서 하나만 확인한다</button><button type="button" data-choice="b">여러 위치의 값과 배지 상태를 함께 본다</button><p class="feedback"></p></fieldset>
+        </div>
+        <div class="quiz-score" id="quizScore">아직 푼 문제가 없습니다.</div>
+      </section>
+
+      <footer class="site-footer">
+        <div><strong>현장에 가져갈 한 문장</strong><p>“설정값보다 변화 추세를 보고, 조치 뒤에는 반드시 다시 확인한다.”</p></div>
+        <div class="source-links"><span>자료 기준</span><a href="https://forest.go.kr/kfs/images/data/down/imsan/imsan_02_01.pdf" target="_blank" rel="noreferrer">산림청 임산물 표준재배지침</a><a href="https://www.nongsaro.go.kr/portal/ps/psb/psby/vodPlay.ps?mvpNo=1518" target="_blank" rel="noreferrer">농촌진흥청 농사로 표고 재배기술</a></div>
+        <p class="footnote">교육용 참고자료입니다. 품종·배지 공급업체 지침, 등록 농약 표시사항, 현장 안전규정을 우선 적용하세요.</p>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
